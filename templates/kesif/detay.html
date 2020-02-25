@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detay Sayfası</title>
+</head>
+<body>
+
+{% if user.is_authenticated %}
+
+<p>Welcome {{user.username}}</p>
+
+    {{kesif.kesifNo}}<br>
+    {{kesif.tarih}}<br>
+    {{kesif.musteri}}<br>
+    {{kesif.ilgiliKisi}}<br>
+    {{kesif.tel}}<br>
+    {{kesif.adres}}<br>
+    {{kesif.aciklama}}<br>
+
+ {% else %}
+    <p>Lütfen Giriş yapınız <a href="{% url 'home' %}">Giriş Yap</a>  </p>
+
+{% endif %}
+
+</body>
+</html>
